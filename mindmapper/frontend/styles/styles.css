@@ -1,1 +1,145 @@
 @import "tailwindcss";
+
+/* General Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F9F9F9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+    h5, h4, h3, h2, h6 { 
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: "Arial black", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: -5%;
+    word-spacing: -10%;
+}
+
+/* Navbar styles */
+
+.navbar {
+    display: flex;
+    height: 6vh;
+    align-items: center;
+    background-color: #F9F9F9;
+    border-bottom: 2px solid black;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0 2%;
+    z-index: 998;
+}
+
+.navbar #collapse-button {
+    display: none;
+    border: 1px solid black;
+    background-color: #e2e2e2;
+    flex: 0 0 60px;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 0 3px;
+    font-weight: 700;
+}
+
+.navbar .title {
+    flex: 1;
+    padding: 0 3%;
+    font-weight: 900;
+    font-family: "Arial black", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.navbar-links {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 7%;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #BEBEBE;
+    font-weight: 700;
+}
+
+.navbar-links li {
+    transition: color 1s ease-out, border-bottom 1s ease-in-out;
+
+    /* Needs border initially to make transition smooth */
+    border-bottom:  3px solid transparent;
+}
+
+.navbar-links li:hover {
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+.navbar-functions {
+    display: flex;
+    flex:1;
+    justify-content: right;
+    padding: 0 3%;
+    gap: 7%;
+}
+
+.navbar-functions button {
+    font-size: 14px;
+    padding: 0 5%;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 2px 2px 2px #5F5F5F;
+}
+
+.navbar .drop-down-navbar-links {
+    z-index: 999;
+    position: relative;
+    top: 5vh;
+    right: 10px;
+    background-color: #BEBEBE;
+    padding: 0 2%;
+    display: none;
+    font-weight: 700;
+}
+
+.navbar .drop-down-navbar-links.show{
+    display: block;  
+}
+
+/* Navbar Responsiveness */
+
+@media (max-width: 650px) {
+    .navbar-links {
+       display: none;
+    }
+
+    .navbar #collapse-button {
+        display: inline;
+    }
+
+    .navbar h4 {
+        font-size: 12px;
+    }
+
+    .navbar-functions button {
+        font-size: 10px;
+        padding: 0 3%;
+    }
+
+    .navbar .title {
+        font-size: 8px;
+    }
+}

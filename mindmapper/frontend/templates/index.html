@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'styles/dist.css' %}" rel="stylesheet">
-    <title>Test with Tailwind</title>
-</head>
-<body>
-    <h1 class="text-9xl border">Test with TailWind</h1>
-</body>
+    {% load static %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'styles/dist.css' %}" rel="stylesheet">
+        <title>Home</title>
+    </head>
+    <body>
+        <!--Navbar Section-->
+        <!-- Styled in seperate styles sheet to avoid repetition -->
+        <nav class="navbar"> 
+            <h6 class="title">Mind_Maps</h6>
+            <button id="collapse-button">Menu <i class="fa-solid fa-caret-down" id="navbar-drop-down-symbol"></i></button>
+            <ul class="drop-down-navbar-links">
+                <li><a href="home">Home</a></li>
+                <li><a href="load">Load Previous</a></li>
+                <li><a href="how-it-works">How it Works</a></li>
+            </ul>
+            <ul class="navbar-links">
+                <li><a href="home">Home</a></li>
+                <li><a href="load">Load Previous</a></li>
+                <li><a href="how-it-works">How it Works</a></li>
+            </ul>
+            <div class="navbar-functions">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <button class="w-fit">Download_CV</button>
+            </div>
+        </nav>
+        <h1 class="text-9xl border my-[40vh] text-center">Home</h1>
+    </body>
 </html>
