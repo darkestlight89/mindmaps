@@ -1,0 +1,18 @@
+{
+  "name": "mindmaps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private":"true",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i mindmapper/frontend/styles/styles.css -o ./mindmapper/frontend/styles/dist.css --watch",
+    "build": "npx @tailwindcss/cli -i mindmapper/frontend/styles/styles.css -o ./mindmapper/frontend/styles/dist.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
